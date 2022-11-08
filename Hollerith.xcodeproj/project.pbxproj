@@ -12,11 +12,14 @@
 		3103E50F2919BE4C00B6F05D /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103E50E2919BE4C00B6F05D /* CalculatorViewController.swift */; };
 		3103E5142919BE4F00B6F05D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3103E5132919BE4F00B6F05D /* Assets.xcassets */; };
 		3103E5172919BE4F00B6F05D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3103E5152919BE4F00B6F05D /* LaunchScreen.storyboard */; };
+		31C7241D2919E52C009AFA7D /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C7241C2919E52C009AFA7D /* ResultTableViewCell.swift */; };
 		31EB1B252919C03D0050EC1A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EB1B242919C03D0050EC1A /* UIColor+Extension.swift */; };
 		31EB1B282919C1BC0050EC1A /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EB1B272919C1BC0050EC1A /* CalculatorView.swift */; };
 		31EB1B2D2919C2010050EC1A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EB1B2C2919C2010050EC1A /* CustomTextField.swift */; };
 		31EB1B2F2919C4410050EC1A /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EB1B2E2919C4410050EC1A /* CustomStackView.swift */; };
 		31EB1B312919C8910050EC1A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EB1B302919C8910050EC1A /* CustomButton.swift */; };
+		31EB1B342919E3F20050EC1A /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EB1B332919E3F20050EC1A /* ResultViewController.swift */; };
+		31EB1B362919E4090050EC1A /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EB1B352919E4090050EC1A /* ResultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,11 +30,14 @@
 		3103E5132919BE4F00B6F05D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3103E5162919BE4F00B6F05D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3103E5182919BE4F00B6F05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31C7241C2919E52C009AFA7D /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		31EB1B242919C03D0050EC1A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		31EB1B272919C1BC0050EC1A /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		31EB1B2C2919C2010050EC1A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		31EB1B2E2919C4410050EC1A /* CustomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStackView.swift; sourceTree = "<group>"; };
 		31EB1B302919C8910050EC1A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		31EB1B332919E3F20050EC1A /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		31EB1B352919E4090050EC1A /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 		3103E5092919BE4C00B6F05D /* Hollerith */ = {
 			isa = PBXGroup;
 			children = (
+				31EB1B322919E3E30050EC1A /* Result */,
 				31EB1B292919C1E10050EC1A /* AppDelegate */,
 				31EB1B2B2919C1F50050EC1A /* Components */,
 				31EB1B232919C02D0050EC1A /* Extensions */,
@@ -109,6 +116,16 @@
 				31EB1B302919C8910050EC1A /* CustomButton.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		31EB1B322919E3E30050EC1A /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				31EB1B332919E3F20050EC1A /* ResultViewController.swift */,
+				31EB1B352919E4090050EC1A /* ResultView.swift */,
+				31C7241C2919E52C009AFA7D /* ResultTableViewCell.swift */,
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31C7241D2919E52C009AFA7D /* ResultTableViewCell.swift in Sources */,
 				3103E50F2919BE4C00B6F05D /* CalculatorViewController.swift in Sources */,
 				31EB1B282919C1BC0050EC1A /* CalculatorView.swift in Sources */,
 				31EB1B2D2919C2010050EC1A /* CustomTextField.swift in Sources */,
@@ -188,7 +206,9 @@
 				31EB1B312919C8910050EC1A /* CustomButton.swift in Sources */,
 				31EB1B2F2919C4410050EC1A /* CustomStackView.swift in Sources */,
 				3103E50D2919BE4C00B6F05D /* SceneDelegate.swift in Sources */,
+				31EB1B362919E4090050EC1A /* ResultView.swift in Sources */,
 				31EB1B252919C03D0050EC1A /* UIColor+Extension.swift in Sources */,
+				31EB1B342919E3F20050EC1A /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

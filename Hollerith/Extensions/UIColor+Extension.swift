@@ -20,4 +20,8 @@ extension UIColor {
     static var mainBlue: UIColor {
         UIColor(red: 79 / 255, green: 166 / 255, blue: 246 / 255, alpha: 1)
     }
+    
+    static var mainBlack: UIColor {
+        UIColor(red: 52 / 255, green: 52 / 255, blue: 52 / 255, alpha: 1)
+    }
 }

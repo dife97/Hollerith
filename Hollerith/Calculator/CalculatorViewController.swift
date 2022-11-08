@@ -7,9 +7,14 @@
 
 import UIKit
 
-class CalculatorViewController: UIViewController {
+final class CalculatorViewController: UIViewController {
 
-    let calculatorView = CalculatorView()
+    private lazy var calculatorView: CalculatorView = {
+        let view = CalculatorView()
+        
+        view.didTapCalculateButton = { self.didTapCalculateButton() } 
+        return view
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +36,15 @@ class CalculatorViewController: UIViewController {
             calculatorView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             calculatorView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
+    }
+    
+    private func didTapCalculateButton() {
+        
+        let resultViewController = ResultViewController()
+        
+        let resultNavigationController = UINavigationController(rootViewController: resultViewController)
+        
+        navigationController?.present(resultNavigationController, animated: true)
     }
 }
 

@@ -7,7 +7,9 @@
 
 import UIKit
 
-class CalculatorView: UIView {
+final class CalculatorView: UIView {
+    
+    var didTapCalculateButton: (() -> Void)?
     
     private let stackView = CustomStackView()
     
@@ -24,7 +26,7 @@ class CalculatorView: UIView {
     private lazy var calculateButton: CustomButton = {
         let button = CustomButton(title: "CALCULAR")
         
-        button.action = { self.didTapCalculateButton() }
+        button.action = { self.calculateButtonTapped() }
         
         return button
     }()
@@ -79,8 +81,8 @@ class CalculatorView: UIView {
         backgroundColor = .mainBackground
     }
     
-    private func didTapCalculateButton() {
+    private func calculateButtonTapped() {
         
-        print("TAPPED")
+        didTapCalculateButton?()
     }
 }
