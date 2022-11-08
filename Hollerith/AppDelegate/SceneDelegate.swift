@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let calculatorNavigationController = UINavigationController(rootViewController: ViewController())
+        let calculatorNavigationController = UINavigationController(rootViewController: CalculatorViewController())
         
         window = UIWindow(windowScene: windowScene)
         
