@@ -11,6 +11,22 @@ final class CalculatorView: UIView {
     
     var didTapCalculateButton: (() -> Void)?
     
+    var grossSalaryValue: Double {
+        if grossSalaryTextField.text?.isEmpty == false {
+            return Double(grossSalaryTextField.text!)!
+        }
+        
+        return 0
+    }
+    
+    var discountValue: Double {
+        if discountsTextField.text?.isEmpty == false {
+            return Double(discountsTextField.text!)!
+        }
+        
+        return 0
+    }
+    
     private let stackView = CustomStackView()
     
     private let grossSalaryTextField = CustomTextField(
@@ -84,5 +100,12 @@ final class CalculatorView: UIView {
     private func calculateButtonTapped() {
         
         didTapCalculateButton?()
+    }
+    
+    func cleanTextFields() {
+        
+        grossSalaryTextField.text = ""
+        
+        discountsTextField.text = ""
     }
 }

@@ -11,39 +11,91 @@ class ResultTableViewCell: UITableViewCell {
     
     static let identifier = "ResultTableViewCell"
     
-    private lazy var myLabel: UILabel = {
-        let label = UILabel()
-        
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 14, weight: .bold)
-        
-        return label
-    }()
+    private var hasSubtitle = false
+
+    private lazy var titleLabel = CustomLabel()
+
+    private lazy var valueLabel = CustomLabel()
+
+    private lazy var subtitleLabel = CustomLabel(
+        fontWeight: .regular,
+        textColor: .mainGray
+    )
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    private func configureCell() {
         
-        configureLabel()
+        if hasSubtitle {
+            configureTitleAndSubtitleLabels()
+        } else {
+            configureTitleLabel()
+        }
+        
+        configureValueLabel()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func configureLabel() {
+    private func configureTitleLabel() {
         
-        contentView.addSubview(myLabel)
-        
+        contentView.addSubview(titleLabel)
+
         NSLayoutConstraint.activate([
-            myLabel.topAnchor.constraint(equalTo: topAnchor),
-            myLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            myLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            myLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
+            titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16)
         ])
     }
     
-    func configure(with title: String) {
+    private func configureValueLabel() {
         
-        myLabel.text = title
+        contentView.addSubview(valueLabel)
+        
+        NSLayoutConstraint.activate([
+            valueLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            valueLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
+        ])
+    }
+    
+    private func configureTitleAndSubtitleLabels() {
+        
+        contentView.addSubview(titleLabel)
+        contentView.addSubview(subtitleLabel)
+        
+        NSLayoutConstraint.activate([
+            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 11),
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            
+            subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 2),
+            subtitleLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor)
+        ])
+    }
+    
+    func configure(with cell: CellConfiguration) {
+        titleLabel.text = cell.title.rawValue
+        
+        valueLabel.text = "R$ \(cell.value)"
+        
+        configureValueWith(cell.valueStyle)
+        
+        if let subtitle = cell.subtitle {
+            subtitleLabel.text = subtitle
+            
+            hasSubtitle = true
+        }
+        
+        configureCell()
+    }
+    
+    private func configureValueWith(_ style: ValueStyle) {
+        
+        switch style {
+        
+        case .positive:
+            valueLabel.textColor = .mainGreen
+            
+        case .negative:
+            valueLabel.textColor = .mainRed
+            
+        case .zero:
+            valueLabel.textColor = .mainGray
+            
+        }
     }
 }

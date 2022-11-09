@@ -40,11 +40,14 @@ final class CalculatorViewController: UIViewController {
     
     private func didTapCalculateButton() {
         
-        let resultViewController = ResultViewController()
+        let resultViewController = ResultViewController(grossSalary: calculatorView.grossSalaryValue,
+                                                        discounts: calculatorView.discountValue)
         
         let resultNavigationController = UINavigationController(rootViewController: resultViewController)
         
         navigationController?.present(resultNavigationController, animated: true)
+        
+        calculatorView.cleanTextFields()
     }
 }
 
