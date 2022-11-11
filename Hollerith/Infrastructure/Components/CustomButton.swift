@@ -66,6 +66,8 @@ class CustomButton: UIView {
         
         mainButton.setTitle(title, for: .normal)
         
+        mainButton.titleLabel?.font = .setRobotoFont(weight: .bold, size: 14)
+        
         mainButton.addTarget(self, action: #selector(didTapCustomButton), for: .touchUpInside)
     }
     

@@ -57,6 +57,8 @@ class CustomTextField: UITextField {
         
         self.keyboardType = keyboardType
         
+        self.font = .setRobotoFont(weight: .regular, size: 16)
+        
         layer.borderColor = UIColor.borderColor.cgColor
         
         layer.borderWidth = 1

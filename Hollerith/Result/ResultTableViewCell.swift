@@ -18,7 +18,7 @@ class ResultTableViewCell: UITableViewCell {
     private lazy var valueLabel = CustomLabel()
 
     private lazy var subtitleLabel = CustomLabel(
-        fontWeight: .regular,
+        font: .setRobotoFont(weight: .regular, size: 15),
         textColor: .mainGray
     )
     
