@@ -26,7 +26,6 @@ class ResultViewModel {
         
         let INSSDiscountValue = INSSDiscountRate * grossSalary
         
-//        let IRRFDiscountValue = IRRFDiscountRate * grossSalary
         let IRRFDiscountValue = calculateIRRF(of: grossSalary)
         
         let netSalary = grossSalary - discounts - INSSDiscountValue - IRRFDiscountValue
@@ -105,4 +104,3 @@ class ResultViewModel {
         }
     }
 }
-

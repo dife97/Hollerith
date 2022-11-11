@@ -30,5 +30,4 @@ class CustomStackView: UIStackView {
         
         translatesAutoresizingMaskIntoConstraints = false
     }
-    
 }

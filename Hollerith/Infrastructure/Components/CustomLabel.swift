@@ -11,8 +11,6 @@ class CustomLabel: UILabel {
     
     init(
         text: String = "-",
-//        fontSize: CGFloat = 15,
-//        fontWeight: UIFont.Weight = .bold,
         font: UIFont = .setRobotoFont(weight: .bold, size: 15),
         alignment: NSTextAlignment = .right,
         textColor: UIColor = .black
@@ -21,8 +19,6 @@ class CustomLabel: UILabel {
         
         configureLabel(
             text: text,
-//            fontSize: fontSize,
-//            fontWeight: fontWeight,
             font: font,
             alignment: alignment,
             textColor: textColor
@@ -34,15 +30,12 @@ class CustomLabel: UILabel {
     }
     
     private func configureLabel(text: String,
-//                                fontSize: CGFloat,
-//                                fontWeight: UIFont.Weight,
                                 font: UIFont,
                                 alignment: NSTextAlignment,
                                 textColor: UIColor) {
         
         translatesAutoresizingMaskIntoConstraints = false
         
-//        font = UIFont.systemFont(ofSize: fontSize, weight: fontWeight)
         self.font = font
         
         textAlignment = alignment
