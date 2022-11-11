@@ -70,7 +70,7 @@ class ResultTableViewCell: UITableViewCell {
     func configure(with cell: CellConfiguration) {
         titleLabel.text = cell.title.rawValue
         
-        valueLabel.text = "R$ \(cell.value)"
+        valueLabel.text = String(format: "R$ %.2f", cell.value)
         
         configureValueWith(cell.valueStyle)
         
@@ -95,7 +95,6 @@ class ResultTableViewCell: UITableViewCell {
             
         case .zero:
             valueLabel.textColor = .mainGray
-            
         }
     }
 }

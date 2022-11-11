@@ -61,7 +61,7 @@ final class ResultViewController: UIViewController {
 
     private func configureDelegates() {
 
-        resultView.configure(delegate: self,dataSource: self)
+        resultView.configure(dataSource: self)
         
         resultViewModel.delegate = self
     }
@@ -84,19 +84,11 @@ extension ResultViewController: UITableViewDataSource {
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ResultTableViewCell.identifier, for: indexPath) as? ResultTableViewCell,
-              let cellConfiguriation = resultViewModel.cells?[indexPath.row] else { return UITableViewCell() }
+              let cellConfiguration = resultViewModel.cells?[indexPath.row] else { return UITableViewCell() }
 
-        cell.configure(with: cellConfiguriation)
+        cell.configure(with: cellConfiguration)
 
         return cell
-    }
-}
-
-extension ResultViewController: UITableViewDelegate {
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-        print("DIEGO LINDO")
     }
 }
 

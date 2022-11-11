@@ -14,6 +14,7 @@ final class ResultView: UIView {
 
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.rowHeight = 60
+        tableView.allowsSelection = false
         tableView.register(ResultTableViewCell.self, forCellReuseIdentifier: ResultTableViewCell.identifier)
 
         return tableView
@@ -55,9 +56,7 @@ final class ResultView: UIView {
         backgroundColor = .mainBackground
     }
 
-    func configure(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
-
-        resultTableView.delegate = delegate
+    func configure(dataSource: UITableViewDataSource) {
 
         resultTableView.dataSource = dataSource
     }
