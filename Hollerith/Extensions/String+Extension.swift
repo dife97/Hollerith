@@ -9,7 +9,7 @@ import Foundation
 
 extension String {
 
-    func convertToCurrencyFormat() -> String {
+    func convertToCurrencyFormat() -> CurrencyModel {
     
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .currency
@@ -32,14 +32,18 @@ extension String {
             let double = (amountWithPrefix as NSString).doubleValue
             
             number = NSNumber(value: (double / 100))
-        
+            
             guard number != 0 as NSNumber else {
-                return ""
+                return CurrencyModel(formatted: "R$ 0,00", number: 0)
             }
+            
+            let formattedString = numberFormatter.string(from: number)!
+            
+            let doubleNumber = Double(truncating: number)
         
-            return numberFormatter.string(from: number)!
+            return CurrencyModel(formatted: formattedString, number: doubleNumber)
         } catch {
-            return ""
+            return CurrencyModel(formatted: "", number: 0)
         }
     }
 }

@@ -22,6 +22,12 @@ final class CalculatorViewController: UIViewController {
         configureView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        configureInitialState()
+    }
+    
     private func configureView() {
         
         title = "Holerite"
@@ -36,6 +42,11 @@ final class CalculatorViewController: UIViewController {
             calculatorView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             calculatorView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
+    }
+    
+    private func configureInitialState() {
+        
+        calculatorView.calculateButton.disableButton()
     }
     
     private func didTapCalculateButton() {

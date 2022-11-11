@@ -9,21 +9,24 @@ import UIKit
 
 final class CalculatorView: UIView {
     
-    var currentNumber: Double = 0
+    var salaryModel: CurrencyModel?
+    
+    var discountModel: CurrencyModel?
     
     var didTapCalculateButton: (() -> Void)?
     
     var grossSalaryValue: Double {
-        if grossSalaryTextField.text?.isEmpty == false {
-            return Double(grossSalaryTextField.text!)!
+        if grossSalaryTextField.text?.isEmpty == false && salaryModel != nil {
+            
+            return salaryModel!.number
         }
         
         return 0
     }
     
     var discountValue: Double {
-        if discountsTextField.text?.isEmpty == false {
-            return Double(discountsTextField.text!)!
+        if discountsTextField.text?.isEmpty == false && discountModel != nil {
+            return discountModel!.number
         }
         
         return 0
@@ -53,12 +56,7 @@ final class CalculatorView: UIView {
         return textField
     }()
     
-//    private let discountsTextField = CustomTextField(
-//        placeholder: "Descontos",
-//        keyboardType: .decimalPad
-//    )
-    
-    private lazy var calculateButton: CustomButton = {
+    lazy var calculateButton: CustomButton = {
         let button = CustomButton(title: "CALCULAR")
         
         button.action = { self.calculateButtonTapped() }
@@ -130,8 +128,28 @@ final class CalculatorView: UIView {
     
     private func applyCurrencyMask(to textField: UITextField) {
         
-        if let amountString = textField.text?.convertToCurrencyFormat() {
-            textField.text = amountString
+        if let currencyValue = textField.text?.convertToCurrencyFormat() {
+            
+            if textField == grossSalaryTextField {
+                salaryModel = currencyValue
+            }
+            
+            if textField == discountsTextField {
+                discountModel = currencyValue
+            }
+            
+            textField.text = currencyValue.formatted
+        }
+        
+        checkToEnableCalculateButton()
+    }
+    
+    private func checkToEnableCalculateButton() {
+        
+        if grossSalaryValue > 0 && discountValue >= 0 {
+            calculateButton.enableButton()
+        } else {
+            calculateButton.disableButton()
         }
     }
 }

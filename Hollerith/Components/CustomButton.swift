@@ -9,6 +9,8 @@ import UIKit
 
 class CustomButton: UIView {
     
+    private var buttonBackground: UIColor
+    
     private let mainButton = UIButton(type: .system)
     
     var action: (() -> Void)?
@@ -17,11 +19,13 @@ class CustomButton: UIView {
         title: String,
         backgroundColor: UIColor = .mainBlue
     ) {
+        self.buttonBackground = backgroundColor
+        
         super.init(frame: .zero)
         
         configureView()
         
-        configureButton(title: title, backgroundColor: backgroundColor)
+        configureButton(title: title)
     }
     
     required init?(coder: NSCoder) {
@@ -50,18 +54,33 @@ class CustomButton: UIView {
         ])
     }
     
-    private func configureButton(title: String,
-                                 backgroundColor: UIColor) {
+    private func configureButton(title: String) {
         
         mainButton.translatesAutoresizingMaskIntoConstraints = false
         
-        mainButton.backgroundColor = backgroundColor
+        mainButton.backgroundColor = buttonBackground
         
         mainButton.setTitleColor(.white, for: .normal)
+        
+        mainButton.setTitleColor(.mainGray, for: .disabled)
         
         mainButton.setTitle(title, for: .normal)
         
         mainButton.addTarget(self, action: #selector(didTapCustomButton), for: .touchUpInside)
+    }
+    
+    func enableButton() {
+        
+        mainButton.isEnabled = true
+        
+        mainButton.backgroundColor = buttonBackground
+    }
+    
+    func disableButton() {
+        
+        mainButton.isEnabled = false
+        
+        mainButton.backgroundColor = .systemGray4
     }
     
     @objc private func didTapCustomButton(_ sender: UIButton) {
