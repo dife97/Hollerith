@@ -122,8 +122,10 @@ final class CalculatorView: UIView {
     func cleanTextFields() {
         
         grossSalaryTextField.text = ""
+        grossSalaryTextField.resignFirstResponder()
         
         discountsTextField.text = ""
+        discountsTextField.resignFirstResponder()
     }
     
     private func applyCurrencyMask(to textField: UITextField) {

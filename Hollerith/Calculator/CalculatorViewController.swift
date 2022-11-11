@@ -56,9 +56,9 @@ final class CalculatorViewController: UIViewController {
         
         let resultNavigationController = UINavigationController(rootViewController: resultViewController)
         
-        navigationController?.present(resultNavigationController, animated: true)
-        
         calculatorView.cleanTextFields()
+        
+        navigationController?.present(resultNavigationController, animated: true)
     }
 }
 

@@ -34,7 +34,7 @@ extension String {
             number = NSNumber(value: (double / 100))
             
             guard number != 0 as NSNumber else {
-                return CurrencyModel(formatted: "R$ 0,00", number: 0)
+                return CurrencyModel(formatted: "", number: 0)
             }
             
             let formattedString = numberFormatter.string(from: number)!
