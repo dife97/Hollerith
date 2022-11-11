@@ -12,6 +12,7 @@
 		3103E50F2919BE4C00B6F05D /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103E50E2919BE4C00B6F05D /* CalculatorViewController.swift */; };
 		3103E5142919BE4F00B6F05D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3103E5132919BE4F00B6F05D /* Assets.xcassets */; };
 		3103E5172919BE4F00B6F05D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3103E5152919BE4F00B6F05D /* LaunchScreen.storyboard */; };
+		3127F426291DDD8100C17C26 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3127F425291DDD8100C17C26 /* String+Extension.swift */; };
 		31C7241D2919E52C009AFA7D /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C7241C2919E52C009AFA7D /* ResultTableViewCell.swift */; };
 		31C7241F2919FC7C009AFA7D /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C7241E2919FC7C009AFA7D /* CustomLabel.swift */; };
 		31C72421291A0012009AFA7D /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C72420291A0012009AFA7D /* ResultViewModel.swift */; };
@@ -33,6 +34,7 @@
 		3103E5132919BE4F00B6F05D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3103E5162919BE4F00B6F05D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3103E5182919BE4F00B6F05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3127F425291DDD8100C17C26 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		31C7241C2919E52C009AFA7D /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		31C7241E2919FC7C009AFA7D /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		31C72420291A0012009AFA7D /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				31EB1B242919C03D0050EC1A /* UIColor+Extension.swift */,
+				3127F425291DDD8100C17C26 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				31EB1B252919C03D0050EC1A /* UIColor+Extension.swift in Sources */,
 				31EB1B342919E3F20050EC1A /* ResultViewController.swift in Sources */,
 				31C72423291A006D009AFA7D /* ResultModel.swift in Sources */,
+				3127F426291DDD8100C17C26 /* String+Extension.swift in Sources */,
 				31C72421291A0012009AFA7D /* ResultViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

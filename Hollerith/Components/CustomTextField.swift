@@ -9,6 +9,8 @@ import UIKit
 
 class CustomTextField: UITextField {
     
+    var didChangeSelection: (() -> Void)?
+    
     private let insets = UIEdgeInsets(
         top: 11,
         left: 11,
@@ -49,6 +51,8 @@ class CustomTextField: UITextField {
         
         translatesAutoresizingMaskIntoConstraints = false
         
+        self.delegate = self
+        
         self.placeholder = placeholder
         
         self.keyboardType = keyboardType
@@ -62,5 +66,12 @@ class CustomTextField: UITextField {
         clipsToBounds = true
         
         backgroundColor = .white
+    }
+}
+
+extension CustomTextField: UITextFieldDelegate {
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        didChangeSelection?()
     }
 }

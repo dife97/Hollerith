@@ -9,6 +9,8 @@ import UIKit
 
 final class CalculatorView: UIView {
     
+    var currentNumber: Double = 0
+    
     var didTapCalculateButton: (() -> Void)?
     
     var grossSalaryValue: Double {
@@ -29,15 +31,32 @@ final class CalculatorView: UIView {
     
     private let stackView = CustomStackView()
     
-    private let grossSalaryTextField = CustomTextField(
-        placeholder: "Salário bruto",
-        keyboardType: .decimalPad
-    )
+    private lazy var grossSalaryTextField: CustomTextField = {
+        let textField = CustomTextField(
+            placeholder: "Salário bruto",
+            keyboardType: .decimalPad
+        )
+        
+        textField.didChangeSelection = { self.applyCurrencyMask(to: textField) }
+        
+        return textField
+    }()
     
-    private let discountsTextField = CustomTextField(
-        placeholder: "Descontos",
-        keyboardType: .decimalPad
-    )
+    private lazy var discountsTextField: CustomTextField = {
+        let textField = CustomTextField(
+            placeholder: "Descontos",
+            keyboardType: .decimalPad
+        )
+        
+        textField.didChangeSelection = { self.applyCurrencyMask(to: textField) }
+        
+        return textField
+    }()
+    
+//    private let discountsTextField = CustomTextField(
+//        placeholder: "Descontos",
+//        keyboardType: .decimalPad
+//    )
     
     private lazy var calculateButton: CustomButton = {
         let button = CustomButton(title: "CALCULAR")
@@ -108,4 +127,12 @@ final class CalculatorView: UIView {
         
         discountsTextField.text = ""
     }
+    
+    private func applyCurrencyMask(to textField: UITextField) {
+        
+        if let amountString = textField.text?.convertToCurrencyFormat() {
+            textField.text = amountString
+        }
+    }
 }
+
