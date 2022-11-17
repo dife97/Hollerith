@@ -16,17 +16,16 @@ final class CalculatorView: UIView {
     var didTapCalculateButton: (() -> Void)?
     
     var grossSalaryValue: Double {
-        if grossSalaryTextField.text?.isEmpty == false && salaryModel != nil {
-            
-            return salaryModel!.number
+        if let salaryNumber = salaryModel?.number, grossSalaryTextField.text?.isEmpty == false {
+            return salaryNumber
         }
         
         return 0
     }
     
     var discountValue: Double {
-        if discountsTextField.text?.isEmpty == false && discountModel != nil {
-            return discountModel!.number
+        if let discountNumber = discountModel?.number, discountsTextField.text?.isEmpty == false {
+            return discountNumber
         }
         
         return 0
@@ -40,7 +39,10 @@ final class CalculatorView: UIView {
             keyboardType: .decimalPad
         )
         
-        textField.didChangeSelection = { self.applyCurrencyMask(to: textField) }
+        textField.didChangeSelection = { [unowned self] in
+
+            self.applyCurrencyMask(to: textField)
+        }
         
         return textField
     }()
@@ -51,7 +53,10 @@ final class CalculatorView: UIView {
             keyboardType: .decimalPad
         )
         
-        textField.didChangeSelection = { self.applyCurrencyMask(to: textField) }
+        textField.didChangeSelection = { [unowned self] in
+            
+            self.applyCurrencyMask(to: textField)
+        }
         
         return textField
     }()
