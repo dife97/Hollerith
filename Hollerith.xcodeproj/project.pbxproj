@@ -9,21 +9,51 @@
 /* Begin PBXBuildFile section */
 		3103E50B2919BE4C00B6F05D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103E50A2919BE4C00B6F05D /* AppDelegate.swift */; };
 		3103E50D2919BE4C00B6F05D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103E50C2919BE4C00B6F05D /* SceneDelegate.swift */; };
-		3103E50F2919BE4C00B6F05D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103E50E2919BE4C00B6F05D /* ViewController.swift */; };
-		3103E5122919BE4C00B6F05D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3103E5102919BE4C00B6F05D /* Main.storyboard */; };
+		3103E50F2919BE4C00B6F05D /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103E50E2919BE4C00B6F05D /* CalculatorViewController.swift */; };
 		3103E5142919BE4F00B6F05D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3103E5132919BE4F00B6F05D /* Assets.xcassets */; };
 		3103E5172919BE4F00B6F05D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3103E5152919BE4F00B6F05D /* LaunchScreen.storyboard */; };
+		3127F426291DDD8100C17C26 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3127F425291DDD8100C17C26 /* String+Extension.swift */; };
+		3127F428291DDF2900C17C26 /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3127F427291DDF2900C17C26 /* CurrencyModel.swift */; };
+		3127F430291DEA3300C17C26 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3127F42D291DEA3300C17C26 /* Roboto-Regular.ttf */; };
+		3127F431291DEA3300C17C26 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3127F42E291DEA3300C17C26 /* Roboto-Bold.ttf */; };
+		3127F434291DEA9700C17C26 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3127F433291DEA9700C17C26 /* UIFont+Extension.swift */; };
+		31C7241D2919E52C009AFA7D /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C7241C2919E52C009AFA7D /* ResultTableViewCell.swift */; };
+		31C7241F2919FC7C009AFA7D /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C7241E2919FC7C009AFA7D /* CustomLabel.swift */; };
+		31C72421291A0012009AFA7D /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C72420291A0012009AFA7D /* ResultViewModel.swift */; };
+		31C72423291A006D009AFA7D /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C72422291A006D009AFA7D /* ResultModel.swift */; };
+		31EB1B252919C03D0050EC1A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EB1B242919C03D0050EC1A /* UIColor+Extension.swift */; };
+		31EB1B282919C1BC0050EC1A /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EB1B272919C1BC0050EC1A /* CalculatorView.swift */; };
+		31EB1B2D2919C2010050EC1A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EB1B2C2919C2010050EC1A /* CustomTextField.swift */; };
+		31EB1B2F2919C4410050EC1A /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EB1B2E2919C4410050EC1A /* CustomStackView.swift */; };
+		31EB1B312919C8910050EC1A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EB1B302919C8910050EC1A /* CustomButton.swift */; };
+		31EB1B342919E3F20050EC1A /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EB1B332919E3F20050EC1A /* ResultViewController.swift */; };
+		31EB1B362919E4090050EC1A /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EB1B352919E4090050EC1A /* ResultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3103E5072919BE4C00B6F05D /* Hollerith.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hollerith.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3103E50A2919BE4C00B6F05D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3103E50C2919BE4C00B6F05D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3103E50E2919BE4C00B6F05D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3103E5112919BE4C00B6F05D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3103E50E2919BE4C00B6F05D /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		3103E5132919BE4F00B6F05D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3103E5162919BE4F00B6F05D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3103E5182919BE4F00B6F05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3127F425291DDD8100C17C26 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		3127F427291DDF2900C17C26 /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
+		3127F42D291DEA3300C17C26 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		3127F42E291DEA3300C17C26 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		3127F433291DEA9700C17C26 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		31C7241C2919E52C009AFA7D /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		31C7241E2919FC7C009AFA7D /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		31C72420291A0012009AFA7D /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+		31C72422291A006D009AFA7D /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
+		31EB1B242919C03D0050EC1A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		31EB1B272919C1BC0050EC1A /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		31EB1B2C2919C2010050EC1A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		31EB1B2E2919C4410050EC1A /* CustomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStackView.swift; sourceTree = "<group>"; };
+		31EB1B302919C8910050EC1A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		31EB1B332919E3F20050EC1A /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		31EB1B352919E4090050EC1A /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +86,102 @@
 		3103E5092919BE4C00B6F05D /* Hollerith */ = {
 			isa = PBXGroup;
 			children = (
-				3103E50A2919BE4C00B6F05D /* AppDelegate.swift */,
-				3103E50C2919BE4C00B6F05D /* SceneDelegate.swift */,
-				3103E50E2919BE4C00B6F05D /* ViewController.swift */,
-				3103E5102919BE4C00B6F05D /* Main.storyboard */,
+				31EB1B292919C1E10050EC1A /* AppDelegate */,
+				31EB1B262919C1B00050EC1A /* Calculator */,
+				31EB1B322919E3E30050EC1A /* Result */,
+				3127F429291DEA1300C17C26 /* Infrastructure */,
+				3127F432291DEA4100C17C26 /* Files */,
+			);
+			path = Hollerith;
+			sourceTree = "<group>";
+		};
+		3127F429291DEA1300C17C26 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				31EB1B2B2919C1F50050EC1A /* Components */,
+				31EB1B232919C02D0050EC1A /* Extensions */,
+				3127F42A291DEA2100C17C26 /* Fonts */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		3127F42A291DEA2100C17C26 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3127F42B291DEA3300C17C26 /* Roboto */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3127F42B291DEA3300C17C26 /* Roboto */ = {
+			isa = PBXGroup;
+			children = (
+				3127F42D291DEA3300C17C26 /* Roboto-Regular.ttf */,
+				3127F42E291DEA3300C17C26 /* Roboto-Bold.ttf */,
+			);
+			path = Roboto;
+			sourceTree = "<group>";
+		};
+		3127F432291DEA4100C17C26 /* Files */ = {
+			isa = PBXGroup;
+			children = (
 				3103E5132919BE4F00B6F05D /* Assets.xcassets */,
 				3103E5152919BE4F00B6F05D /* LaunchScreen.storyboard */,
 				3103E5182919BE4F00B6F05D /* Info.plist */,
 			);
-			path = Hollerith;
+			name = Files;
+			sourceTree = "<group>";
+		};
+		31EB1B232919C02D0050EC1A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				31EB1B242919C03D0050EC1A /* UIColor+Extension.swift */,
+				3127F425291DDD8100C17C26 /* String+Extension.swift */,
+				3127F433291DEA9700C17C26 /* UIFont+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		31EB1B262919C1B00050EC1A /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				3103E50E2919BE4C00B6F05D /* CalculatorViewController.swift */,
+				31EB1B272919C1BC0050EC1A /* CalculatorView.swift */,
+				3127F427291DDF2900C17C26 /* CurrencyModel.swift */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		31EB1B292919C1E10050EC1A /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3103E50A2919BE4C00B6F05D /* AppDelegate.swift */,
+				3103E50C2919BE4C00B6F05D /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		31EB1B2B2919C1F50050EC1A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				31EB1B2C2919C2010050EC1A /* CustomTextField.swift */,
+				31EB1B2E2919C4410050EC1A /* CustomStackView.swift */,
+				31EB1B302919C8910050EC1A /* CustomButton.swift */,
+				31C7241E2919FC7C009AFA7D /* CustomLabel.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		31EB1B322919E3E30050EC1A /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				31C72422291A006D009AFA7D /* ResultModel.swift */,
+				31EB1B352919E4090050EC1A /* ResultView.swift */,
+				31C7241C2919E52C009AFA7D /* ResultTableViewCell.swift */,
+				31EB1B332919E3F20050EC1A /* ResultViewController.swift */,
+				31C72420291A0012009AFA7D /* ResultViewModel.swift */,
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +244,8 @@
 			files = (
 				3103E5172919BE4F00B6F05D /* LaunchScreen.storyboard in Resources */,
 				3103E5142919BE4F00B6F05D /* Assets.xcassets in Resources */,
-				3103E5122919BE4C00B6F05D /* Main.storyboard in Resources */,
+				3127F431291DEA3300C17C26 /* Roboto-Bold.ttf in Resources */,
+				3127F430291DEA3300C17C26 /* Roboto-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +256,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3103E50F2919BE4C00B6F05D /* ViewController.swift in Sources */,
+				31C7241D2919E52C009AFA7D /* ResultTableViewCell.swift in Sources */,
+				3103E50F2919BE4C00B6F05D /* CalculatorViewController.swift in Sources */,
+				31EB1B282919C1BC0050EC1A /* CalculatorView.swift in Sources */,
+				31EB1B2D2919C2010050EC1A /* CustomTextField.swift in Sources */,
 				3103E50B2919BE4C00B6F05D /* AppDelegate.swift in Sources */,
+				31EB1B312919C8910050EC1A /* CustomButton.swift in Sources */,
+				31EB1B2F2919C4410050EC1A /* CustomStackView.swift in Sources */,
+				31C7241F2919FC7C009AFA7D /* CustomLabel.swift in Sources */,
 				3103E50D2919BE4C00B6F05D /* SceneDelegate.swift in Sources */,
+				31EB1B362919E4090050EC1A /* ResultView.swift in Sources */,
+				3127F434291DEA9700C17C26 /* UIFont+Extension.swift in Sources */,
+				3127F428291DDF2900C17C26 /* CurrencyModel.swift in Sources */,
+				31EB1B252919C03D0050EC1A /* UIColor+Extension.swift in Sources */,
+				31EB1B342919E3F20050EC1A /* ResultViewController.swift in Sources */,
+				31C72423291A006D009AFA7D /* ResultModel.swift in Sources */,
+				3127F426291DDD8100C17C26 /* String+Extension.swift in Sources */,
+				31C72421291A0012009AFA7D /* ResultViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3103E5102919BE4C00B6F05D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3103E5112919BE4C00B6F05D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3103E5152919BE4F00B6F05D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +416,6 @@
 				INFOPLIST_FILE = Hollerith/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +443,6 @@
 				INFOPLIST_FILE = Hollerith/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
